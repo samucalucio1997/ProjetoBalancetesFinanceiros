@@ -1,0 +1,19 @@
+body{
+    width: 1000px;
+    background-image: url('./img/foto-vertical-de-um-lindo-ceu-estrelado_181624-25916.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    color:#9375e9;
+}
+
+.min{
+    margin-top: 20%;
+    margin-left: 35%;
+    align-items:center;
+}
+li a{
+    color: #38ff38;
+    text-decoration: none;
+}

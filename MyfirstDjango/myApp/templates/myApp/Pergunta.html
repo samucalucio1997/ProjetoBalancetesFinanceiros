@@ -1,0 +1,34 @@
+{% load static %}
+<html>
+    <head>
+        <title>Enquetes App</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'myApp/pergunta.css' %}"/>
+    </head>
+
+    <body>
+       {%if alt_list %}
+    <div class="principal">
+       <h1>Aplicação Enquetes - DSWeb 2023.2</h1>
+       <img src="{% static 'myApp/img/balloon-looking-planets-and-astronaut-wallpaper-112623_w635.png' %}" height="340px"/>
+        <h3>#{{ alt_list.id}} {{ alt_list.texto }}</h3>
+     <form action="{% url 'myApp:coletavoto' alt_list.id%}" method="post">
+        {%csrf_token%}
+        {%for m in alt_list.alternativa_set.all%}
+          <ul>
+              <li>
+                 <input type="radio" value="{{m.id}}" name="pergunta_id" id="m{{m.id}}"/>
+                 <label for="m{{m.id}}" >{{m.texto}}</label>
+              </li>
+          </ul>
+        {%endfor%}
+        <input type="submit" value="Vote"/>
+       </form>
+    </div>
+    <div class="rodape">
+           <p>____________________________________________________</p>
+           <a href="{% url 'myApp:principal'%}">Home</a>
+           <p>____________________________________________________</p>
+    </div>
+       {%endif%}
+    </body>
+</html>

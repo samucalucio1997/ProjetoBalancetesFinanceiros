@@ -1,0 +1,16 @@
+body{
+   width: 1000px;
+   background-image: url('https://www.pythonanywhere.com/user/samuelifrn/files/home/samuelifrn/MyfirstDjango/static/myApp/img/foto-vertical-de-um-lindo-ceu-estrelado_181624-25916.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.principal{
+    margin-top: 20%;
+    margin-left: 35%;
+    align-items: center;
+}
+
+li a{
+    color: green;
+}

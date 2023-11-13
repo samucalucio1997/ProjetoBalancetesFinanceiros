@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+<head>
+    <title>Perguntas de TI</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'myApp/sp.css' %}"/>
+</head>
+<body>
+    {% if output %}
+    <div class="min">
+     <h1>Perguntas relacionadas à área de ti</h1>
+     <!--<img src="{% static 'myApp/img/c48e95243146b6ee2678a0609e0f6355.jpg'%}"/>-->
+        <ul>
+            {% for lista in output %}
+            <li>
+              <a href="{% url 'myApp:secundario' lista.id %}">{{lista.texto}}</a>   <a href="{% url 'myApp:results' lista.id %}">(parcial)</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</body>
+</html>

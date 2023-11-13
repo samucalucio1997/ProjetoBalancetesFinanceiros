@@ -1,0 +1,23 @@
+{% load static %}
+<html>
+    <head>
+       <link rel="stylesheet" type="text/css" href="{% static 'myApp/resultado.css' %}"/>
+    </head>
+    <body>
+        {%if context %}
+         <h1>Resultado parcial das votações</h1>
+         <h2>{{context.texto}}</h2>
+         {% for alt in context.alternativa_set.all %}
+            <p>{{alt.texto}} == {{alt.qtd_votos}}</p>
+         {% endfor %}
+        {%endif%}
+        <img src="{% static 'myApp/img/galatic.png'%}" width="340px" height="310px"/>
+        <br/>
+         <div class="rodape">
+           <p>____________________________________________________</p>
+           <a href="{% url 'myApp:principal'%}">Home</a>
+           <p>____________________________________________________</p>
+        </div>
+        <br/>
+    </body>
+</html>
