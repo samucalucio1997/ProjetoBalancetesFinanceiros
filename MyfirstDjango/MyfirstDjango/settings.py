@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ['samuelifrn.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'myApp.apps.MyappConfig',
+    'Financeiro',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

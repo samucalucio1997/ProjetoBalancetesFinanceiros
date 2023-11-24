@@ -13,7 +13,7 @@ class Pergunta(models.Model):
 
 
 class Alternativa(models.Model):
-     texto=models.CharField(max_length=80)
-     qtd_votos=models.IntegerField(default=0)
-     pergunta = models.ForeignKey(Pergunta, on_delete=models.CASCADE)
-     ativo = models.BooleanField(default = True)
+    texto=models.CharField(max_length=80)
+    qtd_votos=models.IntegerField(default=0)
+    pergunta = models.ForeignKey(Pergunta, on_delete=models.CASCADE)
+    ativo = models.BooleanField(default = True)

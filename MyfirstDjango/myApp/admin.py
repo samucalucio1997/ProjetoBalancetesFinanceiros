@@ -8,7 +8,7 @@ class QuestionAdmin(admin.ModelAdmin):
          (None, {'fields':['texto']}),
          ('Informações de data', {'fields':['data_pub']}),
          ]
-     #list_display = ['texto']
+     list_display = ['texto']
 
 admin.site.register(Pergunta,QuestionAdmin)
 admin.site.register(Alternativa)
