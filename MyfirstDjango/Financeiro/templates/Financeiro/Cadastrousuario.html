@@ -1,0 +1,15 @@
+<html>
+
+<h1>Cadastro de usuário</h1>
+
+<div>
+    <form action="{% url 'Financeiro:cad' %}" method='POST'>
+      {% csrf_token %}
+      <input type="text" name="username" placeholder='nome'/>
+      <input type="text" name="email" placeholder='email'/>
+      <input type="password" name="password" placeholder='senha'/>
+      <input type="datetime-local" name="data_nasc"/>
+      <button type='submit'>Cadastrar</button>
+    </form>
+</div>
+</html>
