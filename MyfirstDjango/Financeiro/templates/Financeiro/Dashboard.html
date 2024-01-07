@@ -1,8 +1,26 @@
 <html>
   <body>
-    {%if usuario%}
-     <H1>{{usuario.username}}</H1>
-    {%endif%}
-    <h1>, Seja bem vindo</h1>
+    <h1>{{ usuario.nome }}, Seja bem vindo</h1>
+     {% for bal in user.usuario.balancete_set.all %}
+     <div class="Balancete">
+       <h1>{{ bal.nome }}</h1>
+       <h2>{{ bal.data }}</h2>
+       <label>Saldo:</label>
+       <span>{{ saldo.forloop.count }}</span>
+       <br>
+       {% for cc in DContext%}
+        <span>{{ cc.nome }}</span>
+        <span>{{ cc.valor }}</span>
+        <br>
+       {%endfor%} 
+       
+      </div>
+     {% endfor %}
+        {% comment "" %}coloca um for chamando as receitas e despesas{% endcomment %}
+      <p>________________________________________________</p>
+      <a href=""></a>
+      <a href="{% url 'Financeiro:CadBal'%}">Adicionar mais balanço</a>
+    
+    
   </body>
 </html>

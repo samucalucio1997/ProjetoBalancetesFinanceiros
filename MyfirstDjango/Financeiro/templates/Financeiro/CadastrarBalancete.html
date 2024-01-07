@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <h1>Cadastro seu balancete aqui</h1>
+        <form action="{% url 'Financeiro:balancoCad' %}" method='POST'>
+            {% csrf_token %}
+            <input type="text" name="nome"/>
+            <input type="datetime-local" name="data"/>
+            <button type="submit">Cadastrar</button>
+        </form>
+        <p>________________________________</p>
+        <a href = "{%url 'Financeiro:Dashboard'%}">inicio</a>
+    </body>
+</html>

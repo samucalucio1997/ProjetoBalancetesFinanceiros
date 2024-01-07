@@ -1,0 +1,4 @@
+# Arquivos e diretórios padrão para projetos Django
+
+# Ignorar o diretório venv dentro de MyfirstDjango
+MyfirstDjango/venv/
